@@ -2,6 +2,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* CORES */
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background-color: var(--cream);
+    height: 100%;
+    margin: auto;    
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p {
+    color: var(--dark-grayish-blue);
+    font-family: Montserrat, sans-serif;
+}
+
+main {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2em 1.2em;
+    border-radius: 8px;
+}
+
+main img {
+    border-radius: 8px 8px 0 0;
+}
+
+main img + p {
+    text-transform: uppercase;
+    font-size: 0.675rem;
+    font-weight: 500;
+    letter-spacing: 1ch;
+    margin: 6% 0 3% 6%; 
+}
+
+h1 {
+    color: var(--very-dark-blue);
+    font-family: Fraunces, serif;
+    font-size: 2rem;
+    line-height: 1;
+    margin-left: 6%;
+}
+
+h1 + p {
+    margin: 5% 8% 5% 6%;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+}
+
+.offer {
+    color: var(--dark-cyan);
+    font-family: Fraunces, serif;
+    font-size: 1.575rem;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.no-offer {
+    color: var(--dark-grayish-blue);
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;    
+    text-decoration: line-through;
+}
+
+.btn {
+    display: flex;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    /* margin: 5px; */
+    padding: 5px 0;
+    
+}
+
+.btn p {
+    color: var(--white);
+    text-align: center;
+}
+
 
 
 .attribution { font-size: 11px; text-align: center; }
