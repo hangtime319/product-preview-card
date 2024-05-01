@@ -47,33 +47,38 @@ main img {
     border-radius: 8px 8px 0 0;
 }
 
-main img + p {
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+}
+
+.content p:first-child {
     text-transform: uppercase;
     font-size: 0.675rem;
     font-weight: 500;
     letter-spacing: 1ch;
-    margin: 6% 0 3% 6%; 
 }
 
-h1 {
+.content h1 {
     color: var(--very-dark-blue);
     font-family: Fraunces, serif;
     font-size: 2rem;
     line-height: 1;
-    margin-left: 6%;
+    margin: 4% 0;
 }
 
-h1 + p {
-    margin: 5% 8% 5% 6%;
+.content h1 + p {
     font-weight: 500;
     line-height: 1.6;
+    margin-top: 1%;
+    margin-left: 1%;
 }
 
 .price {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 6%;
+    margin: 15px 0;
 }
 
 .offer {
@@ -93,16 +98,23 @@ h1 + p {
 
 .btn {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0;
     width: 100%;
     background-color: var(--dark-cyan);
-    /* margin: 5px; */
-    padding: 5px 0;
-    
+    color: var(--white);
+    border-radius: 8px;
+    padding: 12px 0;
 }
 
-.btn p {
-    color: var(--white);
-    text-align: center;
+.btn::before {
+    display: inline-block;
+    content: url('images/icon-cart.svg');
+    margin: 2px 10px 0 10px;
 }
 
 
