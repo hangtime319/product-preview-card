@@ -28,6 +28,10 @@ img {
     max-width: 100%;
 }
 
+.img-desktop {
+    display: none;
+}
+
 p {
     color: var(--dark-grayish-blue);
     font-family: Montserrat, sans-serif;
@@ -43,7 +47,7 @@ main {
     border-radius: 8px;
 }
 
-main img {
+.img-mobile {
     border-radius: 8px 8px 0 0;
 }
 
@@ -55,7 +59,7 @@ main img {
 
 .content p:first-child {
     text-transform: uppercase;
-    font-size: 0.675rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 1ch;
 }
@@ -118,6 +122,48 @@ main img {
 }
 
 
+@media (min-width: 376px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 200px;
+        width: 600px;
+        height: 450px;
+    }
+    .img-mobile {
+        display: none;
+    }
+    .img-desktop {
+        display: block;
+        border-radius: 8px 0 0 8px;
+        width: inherit;
+        height: inherit;
+    }
+    .content {
+        padding: 0 6%;
+    }
+    .content p:first-child {
+        font-size: 0.75rem;
+        margin-bottom: 20px;
+    }
+    .content h1 + p {
+        margin-top: 20px;
+        margin-left: 1%;
+    }
+    .price {
+        margin: 25px 0 25px 0;
+    }
+    .btn:hover {
+        background-color: hsl(159, 45%, 14%);
+    }
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
